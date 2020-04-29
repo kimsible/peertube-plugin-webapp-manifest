@@ -24,6 +24,15 @@ async function register ({
   getRouter,
   settingsManager
 }) {
+  if (typeof getRouter === 'undefined') {
+    console.error(
+      '[plugin-webapp-manifest]',
+      new Date().toISOString().replace(/T/, ' ').replace(/\..+/, ''),
+      `${'\x1b[31m'}error${'\x1b[0m'}:`,
+      'Cannot register webapp - manifest plugin, please upgrade PeerTube ')
+    return
+  }
+
   // Init staticDir icons
   await mkdir(getStaticPath(), {
     recursive: true
@@ -132,7 +141,9 @@ async function register ({
   })
 }
 
-async function unregister () {
+async function unregister ({ getRouter }) {
+  if (typeof getRouter === 'undefined') return
+
   const originalManifest = await getManifest({ src: true })
 
   const manifest = await getManifest()
