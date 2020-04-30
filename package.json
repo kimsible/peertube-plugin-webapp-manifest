@@ -1,6 +1,6 @@
 {
   "name": "peertube-plugin-webapp-manifest",
-  "description": "Editor for PeerTube PWA manifest",
+  "description": "Upload icons and edit PWA manifest properties: name, description, theme_color, background-color...",
   "version": "0.1.1",
   "author": "kimsible",
   "license": "AGPL-3.0",
