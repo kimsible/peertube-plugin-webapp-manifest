@@ -141,9 +141,7 @@ async function register ({
   })
 }
 
-async function unregister ({ getRouter }) {
-  if (typeof getRouter === 'undefined') return
-
+async function unregister () {
   const originalManifest = await getManifest({ src: true })
 
   const manifest = await getManifest()

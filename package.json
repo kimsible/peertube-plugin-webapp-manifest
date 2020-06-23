@@ -24,7 +24,7 @@
     "webpack-cli": "^3.3.11"
   },
   "engine": {
-    "peertube": ">=2.1.1"
+    "peertube": ">=2.2.0"
   },
   "homepage": "https://github.com/kimsible/peertube-plugin-webapp-manifest",
   "keywords": [
